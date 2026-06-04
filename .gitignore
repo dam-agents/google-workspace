@@ -1,0 +1,7 @@
+# Runtime workspace state (persisted on the agent PVC, not committed)
+work/
+!work/.gitkeep
+
+# OS / editor cruft
+.DS_Store
+*.swp
