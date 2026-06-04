@@ -63,11 +63,20 @@ OAuth consent.
 3. Grant any Google connection to your agent — one is enough to authenticate
    `gws`; grant more to widen the scopes.
 
-### 3. Clone this repo
+### 3. Clone this repo into the agent's work directory
 
-Clone this repo and use it as your agent's config (`CLAUDE.md` +
-`.claude/skills/`). Then ask the agent something like *"list my Google Drive
-files"* or *"triage my Gmail inbox"*.
+Ask the agent to run:
+
+```sh
+git clone https://github.com/dam-agents/google-workspace.git work
+```
+
+The repo root must **be** the work directory (`work`) — the harness only loads
+`CLAUDE.md` and `.claude/skills/` from the work directory root, so a nested
+clone won't be found.
+
+Then ask the agent something like *"list my Google Drive files"* or *"triage my
+Gmail inbox"*.
 
 ## Files
 
